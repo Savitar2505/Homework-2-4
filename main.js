@@ -29,7 +29,7 @@ const getCountry = () =>{
             })
 }
 const countryTable =() => {
-    fetch('https://restcountries.com/v3.1/all' + input.value).then((data) => {
+    fetch('https://restcountries.com/v3.1/all').then((data) => {
         data.json().then(response => {
             response.forEach(elem => {
                 const tb =document.getElementById('table')
@@ -58,7 +58,6 @@ const countryTable =() => {
 
                 tb.append(tr)
             })
-            console.log(response)
         })
     })
 }
